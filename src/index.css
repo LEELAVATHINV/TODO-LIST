@@ -1,5 +1,6 @@
 body {
   background-color: hsl(0, 0%, 10%);
+  background-color: hsla(0, 0%, 10%, 0.633);
   margin: 0;
   padding: 0;
   display: flex;
@@ -9,24 +10,53 @@ body {
   text-align: center;
 }
 
-.to-do-list {
-  font-family: Arial, sans-serif;
-  width: 90%;
-  max-width: 500px;
-  background: hsl(0, 0%, 15%);
-  padding: 20px;
-  border-radius: 10px;
-}
-
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   color: white;
 }
 
+/* Login Page Styling */
+.login-container {
+  background-color: hsla(0, 0%, 10%, 0.633);
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+input {
+  display: block;
+  font-size: 1.6rem;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+  border-radius: 5px;
+}
+
+.login-button {
+  font-size: 1.7rem;
+  padding: 10px 20px;
+  background-color: hsl(207, 90%, 54%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.login-button:hover {
+  background-color: hsl(207, 90%, 44%);
+}
+
+/* To-Do List Styling */
+.to-do-list {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
 button {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
-  padding: 10px 15px;
+  padding: 10px 20px;
   color: white;
   border: none;
   border-radius: 5px;
@@ -36,7 +66,6 @@ button {
 
 .add-button {
   background-color: hsl(125, 47%, 54%);
-  margin-top: 10px;
 }
 
 .add-button:hover {
@@ -45,7 +74,6 @@ button {
 
 .delete-button {
   background-color: hsl(10, 90%, 50%);
-  margin-right: 15px;
 }
 
 .delete-button:hover {
@@ -54,118 +82,34 @@ button {
 
 .move-button {
   background-color: hsl(207, 90%, 64%);
-  margin: 0 5px;
 }
 
 .move-button:hover {
   background-color: hsl(207, 90%, 54%);
 }
 
-input[type="text"] {
-  font-size: 1.4rem;
-  padding: 10px;
-  border: 2px solid hsla(0, 0%, 80%, 0.5);
-  border-radius: 5px;
-  color: hsla(0, 0%, 0%, 0.7);
-  width: calc(100% - 22px);
-  display: block;
-  margin: 0 auto 10px;
-}
-
 ol {
   padding: 0;
-  list-style: none;
-  width: 100%;
 }
 
 li {
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: bold;
+  padding: 15px;
   background-color: hsl(0, 0%, 97%);
   margin-bottom: 10px;
   border: 3px solid hsl(0, 0%, 0%);
   border-radius: 5px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 15px;
-  flex-wrap: wrap;
 }
 
 .text {
   flex: 1;
-  text-align: left;
-  padding-left: 10px;
-}
-
-.button-container {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .delete-button, .move-button {
   padding: 8px 12px;
-  font-size: 1.2rem;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  button {
-    font-size: 1.3rem;
-    padding: 8px 12px;
-  }
-
-  input[type="text"] {
-    font-size: 1.2rem;
-    width: 100%;
-  }
-
-  li {
-    font-size: 1.4rem;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-  }
-
-  .button-container {
-    width: 100%;
-    justify-content: center;
-    gap: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  button {
-    font-size: 1.2rem;
-    padding: 6px 10px;
-  }
-
-  input[type="text"] {
-    font-size: 1rem;
-  }
-
-  li {
-    font-size: 1.2rem;
-    padding: 10px;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .button-container {
-    width: 100%;
-    justify-content: center;
-    gap: 10px;
-  }
+  font-size: 1.4rem;
+  margin-left: 10px;
 }
